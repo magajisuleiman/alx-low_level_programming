@@ -4,6 +4,10 @@
 #include <stdio.h>
 
 /* betty style doc for function main goes there */
+
+/**
+* my_function - will assign random numbers to variable n
+*/
 int main(void)
 {
 	int n;
