@@ -11,5 +11,6 @@
 		int is_prime_number(int n);
 		int logic (int, int);
 		int primelogic(int, int );
-
+		int wildcmp(char *s1, char *s2);
+		
 	#endif 
