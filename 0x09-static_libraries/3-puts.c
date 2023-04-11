@@ -1,11 +1,17 @@
 #include "main.h"
+#include <stdio.h>
+
+void _puts(char *str);
+
 /**
- * _puts - prints a string, followed by a new line, to stdout
- * @str: string to print
+ * main - prints a string, followed by a new line, to stdout
+ *
+ *
+ * Return: at success 0
  */
-void _puts(char *str)
+
+int main(void)
 {
-	while (*str != '\0')
-		_putchar(*str++);
-	_putchar('\n');
+	_puts("I love you");
+	return (0);
 }
