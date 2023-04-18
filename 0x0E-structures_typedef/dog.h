@@ -2,12 +2,12 @@
 #define DOG_H
 
 /**
- * srtuct dog - user define data type sruct dog
+ * struct dog - user define data type sruct dog
  * @name: structure menmber 1
  * @age: structure menmber 2
  * @owner: structure menmber 3
  *
- * Description: data type classify a dog with all its properties 
+ * Description: classify a dog and its properties
 */
 struct dog
 {
