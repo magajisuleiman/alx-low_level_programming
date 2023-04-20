@@ -1,49 +1,38 @@
 #include <stdio.h>
-	#include <stdlib.h>
+#include <stdlib.h>
 
+/**
+* main - function that prints it upcode
+* @argc: argument number
+* @argv: vector argument
+*
+* Return: 0 (Success)
+*/
+int main(int argc, char *argv[])
+{
+	int byt;
+	int i;
+	char *array;
 
-	/**
-	 * main - prints its own opcodes
-	 * @argc: number of arguments
-	 * @argv: array of arguments
-	 *
-	 * Return: Always 0 (Success)
-	 */
-	int main(int argc, char *argv[])
+	(argc != 2) ? (printf("Error\n"), exit(1)) : (0);
+
+	byt = atoi(argv[1]);
+
+	(byt < 0) ? (printf("Error\n"), exit(2)) : (0);
+
+	array = (char *)main;
+
+	i = 0;
+	while (i < byt)
 	{
-		int bytes, i;
-		char *arr;
-
-
-		if (argc != 2)
+		if (i == byt - 1)
 		{
-			printf("Error\n");
-			exit(1);
+			printf("%02hhx\n", array[i]);
+			break;
 		}
-
-
-		bytes = atoi(argv[1]);
-
-
-		if (bytes < 0)
-		{
-			printf("Error\n");
-			exit(2);
-		}
-
-
-		arr = (char *)main;
-
-
-		for (i = 0; i < bytes; i++)
-		{
-			if (i == bytes - 1)
-			{
-				printf("%02hhx\n", arr[i]);
-				break;
-			}
-			printf("%02hhx ", arr[i]);
-		}
-		return (0);
+		i++;
+		printf("%02hhx ", array[i]);
 	}
 
+	return (0);
+}
