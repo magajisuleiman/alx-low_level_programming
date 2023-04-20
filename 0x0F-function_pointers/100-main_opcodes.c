@@ -25,14 +25,13 @@ int main(int argc, char *argv[])
 	i = 0;
 	while (i < byt)
 	{
-		if (i == byt - 1)
+		if (i == (byt - 1))
 		{
 			printf("%02hhx\n", array[i]);
 			break;
 		}
-		i++;
 		printf("%02hhx ", array[i]);
+		i++;
 	}
-
 	return (0);
 }
