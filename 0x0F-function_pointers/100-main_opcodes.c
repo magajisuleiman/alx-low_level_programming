@@ -14,22 +14,14 @@ int main(int argc, char *argv[])
 	int i;
 	char *array;
 
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(1);
-	}
+	(argc != 2) ? (printf("Error\n"), exit(1)) : (0);
 
 	byt = atoi(argv[1]);
 
-	if (byt < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
+	(byt < 0) ? (printf("Error\n"), exit(2)) : (0);
 
 	array = (char *)main;
+
 	i = 0;
 	while (i < byt)
 	{
@@ -38,8 +30,9 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", array[i]);
 			break;
 		}
-			printf("%02hhx ", array[i]);
-		}
 		i++;
-		return (0);
+		printf("%02hhx ", array[i]);
 	}
+
+	return (0);
+}
