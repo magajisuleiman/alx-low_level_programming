@@ -10,24 +10,18 @@
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	/* create the the new node */
 	listint_t *myNode;
 
 	myNode = (listint_t *) malloc(sizeof(listint_t));
-
-	/* add data to the new node */
 	myNode->n = n;
 
-	if (myNode == NULL)
+	if (!myNode)
 	{
 		return (NULL);
 	}
 	else
 	{
-		/* make next of new node equal to head */
 		myNode->next = (*head);
-
-		/* head is equal to new node */
 		(*head) = myNode;
 	}
 
