@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_dlistint -  Function that prints element of a node
+ * dlistint_len -  Function that prints element of a node
  * @h: head node of the liked list
  *
  * Return: idx which is count of number of element
