@@ -7,11 +7,12 @@ ADD404_NOTFOUND="error_page 404 /custom_404.html;\n\\tlocation = /custom_404.htm
 PATTERN="#error_page 404 /404.html;"
 ADD_HEADER="\\\tadd_header X-Served-By $HOSTNAME;"
 
-sudo apt-get update
+# Install nginx on web server; Nginx should be listening on port 80
+sudo apt-get -y update
 sudo apt-get -y install nginx
-sudo service nginx start
-
 echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+sudo service nginx start
 
 # melissax.online/redirect_me redirects to google.com (add to line 30)
 sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default
