@@ -13,7 +13,9 @@
 int interpolation_search(int *array, size_t size, int value)
 {
 	if (array == NULL || size == 0)
-		return -1; /* Array is NULL or empty, return -1 */
+	{
+		return (-1); /* Array is NULL or empty, return -1 */
+	}
 
 	int low = 0;
 	int high = size - 1;
@@ -26,7 +28,9 @@ int interpolation_search(int *array, size_t size, int value)
 		printf("Comparing with array[%zu] = %d\n", pos, array[pos]);
 
 		if (array[pos] == value)
-			return pos; /* Value found */
+		{
+			return (pos); /* Value found */
+		}
 		else if (array[pos] < value)
 		{
 			low = pos + 1; /* Adjust the search range to the right */
@@ -36,5 +40,5 @@ int interpolation_search(int *array, size_t size, int value)
 			high = pos - 1; /* Adjust the search range to the left */
 		}
 	}
-	return -1; /* Value not found */
+	return (-1); /* Value not found */
 }
