@@ -1,0 +1,1 @@
+This folder contain all the solutions to ALX search algorithm 
